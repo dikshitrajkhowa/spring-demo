@@ -1,0 +1,7 @@
+Part 2 of spring security 1 
+This includes the following
+	- Database authentication
+	- Custom Form based login (till 2 it was basic HttpBasic)
+
+for h2 
+/h2-console

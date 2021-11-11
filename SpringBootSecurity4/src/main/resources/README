@@ -1,0 +1,14 @@
+Part 4 of spring security  
+This includes the following
+	- Database authentication
+	- JWT
+
+No views in APP, only REST Endpoints
+
+for h2 
+/h2-console
+
+Started with h2 and eventually moved to MySql
+
+user - role -> One to Many
+role - authorities -> many to many

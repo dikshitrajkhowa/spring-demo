@@ -1,0 +1,14 @@
+From youtube, romanian coder
+SpringBootSecurity1
+	- Inmemory
+	- Roles and Authorities
+	- HTTPS
+	
+SpringBootSecurity2
+	- Database Authentication
+
+SpringBootSecurity3
+	- Form based authentication
+	
+SpringBootSecurity4
+	- JWT
