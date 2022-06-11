@@ -1,0 +1,13 @@
+Concepts Covered
+	- REST controller
+	- Auto configurations
+	- Response Entity
+	- HTTP Status codes
+	- Exception Handling
+	- Validation [Using @Valid annotation in POST request]
+	- HATEOS
+	- Internationalizations
+	- Content Negotiation
+	- Swagger Open API
+	- Actuator
+	- HAL Explorer (localhost:8080)
