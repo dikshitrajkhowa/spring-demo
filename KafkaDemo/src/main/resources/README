@@ -1,0 +1,4 @@
+$KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper ubuntu:2181,slave1:2181,slave2:2181 
+--replication-factor 3 --partitions 1 --topic kafkatest
+
+Windows have problem connecting to my Kafka cluster in VM hence package the solution and run from linux

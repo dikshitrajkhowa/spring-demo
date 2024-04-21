@@ -1,0 +1,11 @@
+https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/
+
+CREATE DATABASE `file_demo` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fileName` varchar(500) DEFAULT NULL,
+  `fileType` varchar(500) DEFAULT NULL,
+  `data` longblob,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
