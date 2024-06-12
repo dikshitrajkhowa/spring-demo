@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Your changesets here -->
+    <changeSet id="1" author="example">
+        <createTable tableName="person">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="firstname" type="varchar(50)"/>
+            <column name="lastname" type="varchar(50)"/>
+            <column name="birthdate" type="date"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="example">
+        <addColumn tableName="person">
+            <column name="email" type="varchar(100)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="3" author="example">
+        <insert tableName="person">
+            <column name="id" valueNumeric="1"/>
+            <column name="firstname" value="John"/>
+            <column name="lastname" value="Doe"/>
+            <column name="birthdate" valueDate="1980-01-01"/>
+            <column name="email" value="john.doe@example.com"/>
+        </insert>
+    </changeSet>
+
+    <!-- Add a tag after the changesets -->
+    <changeSet id="4" author="example">
+        <tagDatabase tag="release-1.0"/>
+    </changeSet>
+</databaseChangeLog>
