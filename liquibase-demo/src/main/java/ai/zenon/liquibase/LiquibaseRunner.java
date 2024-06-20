@@ -18,15 +18,15 @@ public class LiquibaseRunner {
 
     public static void main(String[] args) {
         if (args.length < 6) {
-            System.out.println("Usage: java -jar LiquibaseRunner.jar <dbUrl> <dbUser> <dbPassword> <changelogFile> <searchDir> <action> [rollbackTag]");
+            System.out.println("Usage: java -jar LiquibaseRunner.jar <dbUrl> <dbUser> <dbPassword>  <searchDir> <changelogFile> <action> [rollbackTag]");
             System.exit(1);
         }
 
         String url = args[0];
         String user = args[1];
         String password = args[2];
-        String changelogFilePath = args[3];
-        String searchDir = args[4];
+        String searchDir = args[3];
+        String changelogFilePath = args[4];
         String action = args[5];
         String rollbackTag = args.length > 6 ? args[6] : null;
 
