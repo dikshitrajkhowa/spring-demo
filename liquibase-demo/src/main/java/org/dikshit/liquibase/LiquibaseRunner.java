@@ -1,4 +1,4 @@
-package ai.zenon.liquibase;
+package org.dikshit.liquibase;
 
 import liquibase.Liquibase;
 import liquibase.Contexts;

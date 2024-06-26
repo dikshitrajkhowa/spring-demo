@@ -32,7 +32,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>ai.zenon.liquibase.LiquibaseRunner</mainClass>
+							<mainClass>org.dikshit.liquibase.LiquibaseRunner</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
