@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, function(frame) {
-            console.log('Connected: ', frame);
+//            console.log('Connected: ', frame);
             sendVideoStream(stream);
         }, function(error) {
             console.error('WebSocket connection error: ', error);
@@ -79,28 +79,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         sendVideoInterval = setInterval(function() {
             context.drawImage(video, 0, 0, videoWidth, videoHeight);
-
-            // Compressing the image by resizing
-            const compressedDataUrl = compressImage(canvas, 320, 240); // Adjust dimensions as needed
-
-            console.log("Sending compressed video data: ", compressedDataUrl.substring(0, 50), "...");
+            const dataUrl = canvas.toDataURL('image/webp');
+//            console.log("Sending video data: ", dataUrl.substring(0, 50), "...");
 
             if (stompClient && stompClient.connected) {
                 stompClient.send("/app/stream", {}, JSON.stringify({
                     userId: userId,
-                    streamData: compressedDataUrl
+                    streamData: dataUrl
                 }));
             }
         }, captureInterval);
-    }
-
-    function compressImage(canvas, width, height) {
-        const tempCanvas = document.createElement('canvas');
-        const tempContext = tempCanvas.getContext('2d');
-        tempCanvas.width = width;
-        tempCanvas.height = height;
-        tempContext.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, width, height);
-        return tempCanvas.toDataURL('image/webp', 0.5); // Adjust image quality (0.5 is 50% quality)
     }
 
     function generateUniqueId() {

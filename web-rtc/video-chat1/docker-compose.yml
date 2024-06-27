@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  spring-app:
+    container_name: spring-app
+    image: openjdk:21-slim
+    volumes:
+      - ./target/video-chat1-1.0.jar:/app/app.jar
+    ports:
+      - "6360:8443"
+    command: ["java", "-jar", "/app/app.jar"]
