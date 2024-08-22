@@ -1,3 +1,9 @@
+window.onbeforeunload = function (e) {
+// Your logic to prepare for 'Stay on this Page' goes here
+
+    return "Please click 'Stay on this Page' and we will give you candy";
+};
+
 document.addEventListener("DOMContentLoaded", function() {
     const socket = new SockJS('/ws');
     const stompClient = Stomp.over(socket);
